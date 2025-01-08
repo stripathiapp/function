@@ -10,7 +10,8 @@ function plot() {
     try {
       y.push(eval(functionStr.replace(/x/g, i)));
     } catch (error) {
-      y.push(null); // Handle invalid function input
+      console.error("Error evaluating function:", error); // Log error to console
+      y.push(null); 
     }
   }
 
